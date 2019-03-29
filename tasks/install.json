@@ -1,0 +1,44 @@
+{
+  "puppet_task_version": 1,
+  "supports_noop": false,
+  "description": "A task to install the Splunk Collectd Agent",
+  "input_method": "environment",
+  "parameters": {
+    "splunk_url": {
+      "description": "URL of Splunk HEC",
+      "type": "String[1]"
+    },
+    "hec_port": {
+      "description": "Splunk HEC Port, usually 8080",
+      "type": "Integer"
+    },
+    "hec_token": {
+      "description": "HEC Token, something like 56e76567567567",
+      "type": "String[1]"
+    },
+    "reciever_port": {
+        "description": "Reciever Port Number, usually 8080",
+        "type": "Integer"
+    },
+    "dimensions": {
+      "description": "Dimensions settings",
+      "type": "String[1]"
+    },
+    "metric_types": {
+      "description": "Types of metrics to collect, example = cpu,df,disk,interface,load,memory",
+      "type": "String[1]"
+    },
+    "metric_opts": {
+      "description": "Options for metrics, example = cpu.by_cpu",
+      "type": "String[1]"
+    },
+    "log_sources": {
+      "description": "Log sources string, example = /etc/collectd/collectd.log%collectd,\\$SPLUNK_HOME/var/log/splunk/*",
+      "type": "String[1]" 
+    },
+    "agent_url": {
+      "description": "URL of Unix Agent Tarball",
+      "type": "String[1]" 
+    }
+  }
+}
